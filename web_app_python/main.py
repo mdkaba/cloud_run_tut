@@ -6,7 +6,11 @@ app = Flask(__name__)
 
 from google.cloud import bigquery
 
+@app.route("/", methods=['GET', 'POST'])
+def hello_world():
+    """Example Hello World route."""
 
+    return f"Hello World!!!@@@@!!!"
 
 @app.route("/user", methods=['GET'])
 def user_resource():
